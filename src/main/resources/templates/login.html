@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+<head>
+</head>
+<body>
+	<div layout:fragment="content">
+	<form action="/orders.html" th:action="@{doLogin}" th:object="${loginModel}" method="POST">
+		<table>
+			<tr>
+			 	<div class="m-3">
+					<td>Email:</td><td><input type="text" th:field="*{username}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name error</p></td>
+				</div>	
+			</tr>
+			
+			<tr>
+				<td>Password:</td><td><input type="password" th:field="*{password}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error</p></td>
+			</tr>
+			<br>
+			<tr>
+				<td colspan="2"><input type="submit" value="Submit" class="btn btn-primary"/></td>
+			</tr>
+		</table>
+		<div th:if="${#fields.hasErrors('*')}">List of Errors</div> 
+		<div th:each="err : ${#fields.errors('*')}">
+			<span style="color: red;" th:text="${err}" class="fieldErrors"></span>
+		</div>
+			
+			
+		
+	</form>
+	</div>
+</body>
+
+
+</html>
