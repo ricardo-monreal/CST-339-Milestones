@@ -1,10 +1,10 @@
 package com.gcu.model;
 
-public class OrderModel {
+public class ProductModel {
 	
 	
 	private Long id;
-	private String orderNo;
+	private String productNo;
 	private String productName;
 	private Float price;
 	private int quantity;
@@ -17,11 +17,11 @@ public class OrderModel {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getOrderNo() {
-		return orderNo;
+	public String getProductNo() {
+		return productNo;
 	}
-	public void setOrderNo(String orderNo) {
-		this.orderNo = orderNo;
+	public void setProductNo(String productNo) {
+		this.productNo = productNo;
 	}
 	public String getProductName() {
 		return productName;
@@ -44,10 +44,10 @@ public class OrderModel {
 	
 	
 	
-	public OrderModel(Long id, String orderNo, String productName, Float price, int quantity) {
+	public ProductModel(Long id, String productNo, String productName, Float price, int quantity) {
 		super();
 		this.id = id;
-		this.orderNo = orderNo;
+		this.productNo = productNo;
 		this.productName = productName;
 		this.price = price;
 		this.quantity = quantity;

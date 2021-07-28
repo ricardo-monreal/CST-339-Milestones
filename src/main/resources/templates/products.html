@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+<head>
+</head>
+<body>
+	<div layout:fragment="content">
+		<table style="width: 50%; margin-left:auto;margin-right:auto;" >
+			<thead>
+				<tr>
+					<th style="text-align: center;">Product Number</th>
+					<th style="text-align: center;">Product Name</th>
+					<th style="text-align: center;">Price</th>
+					<th style="text-align: center;">Quantity</th>
+				</tr>
+			</thead>
+	
+			<tbody>
+				<tr th:if="${products.empty}">
+					<td style="text-align: center;" colspan="4">No Products Available</td>
+				</tr>
+				<tr th:each="product : ${products}">
+					<td style="text-align: center;"><h5 th:text="${product.productNo}">0000001</h5></td>
+					<td style="text-align: center;"><h5 th:text="${product.productName}">Product 1</h5></td>
+					<td style="text-align: center;"><h5 th:text="${product.price}">1.00</h5></td>
+					<td style="text-align: center;"><h5 th:text="${product.quantity}">1</h5></td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+
+
+</html>

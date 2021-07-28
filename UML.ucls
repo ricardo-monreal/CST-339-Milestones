@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.gcu.model.OrderModel" project="Milestone2" 
-    file="/Milestone2/src/main/java/com/gcu/model/OrderModel.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="com.gcu.model.ProductModel" project="Milestone2" 
+    file="/Milestone2/src/main/java/com/gcu/model/ProductModel.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="400" y="82"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
