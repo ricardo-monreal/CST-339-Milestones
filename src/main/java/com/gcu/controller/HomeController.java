@@ -1,5 +1,7 @@
 package com.gcu.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -11,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gcu.UserRepository;
 import com.gcu.model.User;
-
-
 
 @Controller
 @RequestMapping("/")
@@ -55,6 +55,16 @@ public class HomeController {
 		userRepo.save(user);
 		
 		return "register_success";
+	}
+	
+	
+	// FindAll is defined by the Spring Data JPA’s JpaRepository interface.
+	@GetMapping("/users")
+	public String listUsers(Model model) {
+	    List<User> listUsers = userRepo.findAll();
+	    model.addAttribute("listUsers", listUsers);
+	     
+	    return "users";
 	}
 	
 	
