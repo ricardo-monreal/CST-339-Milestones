@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import javax.validation.Valid;
 
+import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.gcu.UserRepository;
 import com.gcu.model.LoginModel;
 import com.gcu.model.ProductModel;
 
@@ -18,6 +22,8 @@ import com.gcu.model.ProductModel;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
+	
+	
 	
 	
 	@GetMapping("/")
@@ -61,6 +67,10 @@ public class LoginController {
 		model.addAttribute("products", products);
 		return "products";
 	}
+	
+	
+
+
 	
 	
 	
