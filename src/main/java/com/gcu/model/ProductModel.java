@@ -1,13 +1,32 @@
 package com.gcu.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "products")
 public class ProductModel {
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false, unique = true, length = 45)
 	private String productNo;
+	
+	@Column(nullable = false, length = 64)
 	private String productName;
+	
+	
+	@Column(name="price", nullable = false, length = 20)
 	private Float price;
-	private int quantity;
+	
+	@Column(name="quantity", nullable = false, length = 20)
+	private Integer quantity;
 	
 	
 	
@@ -35,26 +54,15 @@ public class ProductModel {
 	public void setPrice(Float price) {
 		this.price = price;
 	}
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(int quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 	
 	
-	
-	public ProductModel(Long id, String productNo, String productName, Float price, int quantity) {
-		super();
-		this.id = id;
-		this.productNo = productNo;
-		this.productName = productName;
-		this.price = price;
-		this.quantity = quantity;
-	}
-	
-	
-	
+
 	
 
 }

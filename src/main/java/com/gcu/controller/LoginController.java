@@ -26,7 +26,7 @@ public class LoginController {
 	
 	
 	
-	@GetMapping("/")
+	@GetMapping("")
 	public String display(Model model) 
 	{
 		// Display login form view
@@ -49,23 +49,22 @@ public class LoginController {
 			model.addAttribute("title", "Login Form");
 			return "login";
 		}
-		
-		
-		//create some orders
-		ArrayList<ProductModel> products = new ArrayList<ProductModel>();
-		//List<OrderModel> orders = new ArrayList<OrderModel>();
-		products.add(new ProductModel(0L, "00000001", "Product 1", 1.00f, 1));
-		products.add(new ProductModel(1L, "00000002", "Product 2", 2.00f, 1));
-		products.add(new ProductModel(2L, "00000003", "Product 3", 3.00f, 1));
-		products.add(new ProductModel(3L, "00000004", "Product 4", 4.00f, 1));
-		products.add(new ProductModel(4L, "00000005", "Product 5", 5.00f, 1));
-		//orders.add(new OrderModel(0L, "00000001", "Product 1", 1.00f, 1));
-		
-		
-		// display the Orders view
+	
+//		//create some orders
+////		ArrayList<ProductModel> products = new ArrayList<ProductModel>();
+////		//List<OrderModel> orders = new ArrayList<OrderModel>();
+////		products.add(new ProductModel(0L, "00000001", "Product 1", 1.00f, 1));
+////		products.add(new ProductModel(1L, "00000002", "Product 2", 2.00f, 1));
+////		products.add(new ProductModel(2L, "00000003", "Product 3", 3.00f, 1));
+////		products.add(new ProductModel(3L, "00000004", "Product 4", 4.00f, 1));
+////		products.add(new ProductModel(4L, "00000005", "Product 5", 5.00f, 1));
+//		
+//		
+//		
+	// display the Orders view
 		model.addAttribute("title", "Products");
-		model.addAttribute("products", products);
-		return "products";
+		
+	return "products";
 	}
 	
 	

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.gcu.ProductRepository;
 import com.gcu.UserRepository;
+import com.gcu.model.ProductModel;
 import com.gcu.model.User;
 
 @Controller
@@ -24,6 +26,10 @@ public class HomeController {
 	
 	@Autowired
 	private UserRepository userRepo;
+	
+	@Autowired
+	private ProductRepository productRepo;
+	
 	
 	@GetMapping("/")
 	public String indexPage(Model model) 
@@ -65,6 +71,28 @@ public class HomeController {
 	    model.addAttribute("listUsers", listUsers);
 	     
 	    return "users";
+	}
+	
+	@GetMapping("/create-product")
+	public String createProductForm(Model model) {
+		model.addAttribute("product", new ProductModel());
+		
+		return "create_product";
+	}
+	
+	@GetMapping("/products")
+	public String listProducts(Model model) {
+		List<ProductModel> listProducts = productRepo.findAll();
+		model.addAttribute("listProducts", listProducts);
+		
+		return "products";
+	}
+	
+	@PostMapping("process_create_product")
+	public String processCreateProduct(ProductModel product) {
+		productRepo.save(product);
+		
+		return "product_create_success";
 	}
 	
 	
