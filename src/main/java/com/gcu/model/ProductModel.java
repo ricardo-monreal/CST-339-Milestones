@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "products")
 public class ProductModel {
 	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
