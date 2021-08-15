@@ -132,6 +132,14 @@ public class HomeController {
 		return "product_create_success";
 	}
 	
+	// update product handler ==== TESTING
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public String updateProduct(@ModelAttribute("product") ProductModel product) {
+		service.save(product);
+			
+		return "product_update_success";
+	}
+	
 	// implement delete product feature === Milestone 5
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {
