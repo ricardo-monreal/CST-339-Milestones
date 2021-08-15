@@ -16,17 +16,17 @@ public class ProductModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false, unique = true, length = 45)
+	//@Column(nullable = false, unique = true, length = 45)
 	private String productNo;
 	
-	@Column(nullable = false, length = 64)
+	//@Column(nullable = false, length = 64)
 	private String productName;
 	
 	
-	@Column(name="price", nullable = false, length = 20)
+	//Column(name="price", nullable = false, length = 20)
 	private Float price;
 	
-	@Column(name="quantity", nullable = false, length = 20)
+	//@Column(name="quantity", nullable = false, length = 20)
 	private Integer quantity;
 	
 	

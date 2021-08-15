@@ -1,0 +1,67 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+<head>
+<title>Edit Product</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		  <div class="container text-center">
+        <div>
+            <h1>Edit a product</h1>
+        </div>
+        <form th:action="@{/save}" th:object="${product}"
+            method="POST" style="max-width: 600px; margin: 0 auto;">
+            
+        <div class="m-3">
+        <div class="form-group row">
+                <label class="col-4 col-form-label">Product ID: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{id}" class="form-control" readonly="readonly" />
+                </div>
+            </div>
+             <br>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Product Number: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{productNo}" class="form-control" required />
+                </div>
+            </div>
+             <br>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Product Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{productName}" class="form-control"
+                            required minlength="6" maxlength="64"/>
+                </div>
+            </div>
+             <br>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Price: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{price}" class="form-control"
+                            required minlength="2" maxlength="20"/>
+                </div>
+            </div>
+             <br>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Quantity: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{quantity}" class="form-control"
+                            required minlength="1" maxlength="20" />
+                </div>
+            </div>
+             <br>
+            <div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        </form>
+    </div>
+	
+		
+	</div>
+	
+</body>
+
+
+</html>
