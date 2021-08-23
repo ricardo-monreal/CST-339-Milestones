@@ -4,30 +4,34 @@
 </head>
 <body>
 	<div layout:fragment="content">
-	<form action="/orders.html" th:action="@{doLogin}" th:object="${loginModel}" method="POST">
-		<table>
-			<tr>
-			 	<div class="m-3">
-					<td>Email:</td><td><input type="text" th:field="*{username}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name error</p></td>
-				</div>	
-			</tr>
+		<div th:if="${param.error}">
+			<span style="color: red;">Invalid User Name or Password!</span>
 			
-			<tr>
-				<td>Password:</td><td><input type="password" th:field="*{password}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error</p></td>
-			</tr>
-			<br>
-			<tr>
-				<td colspan="2"><input type="submit" value="Submit" class="btn btn-primary"/></td>
-			</tr>
-		</table>
-		<div th:if="${#fields.hasErrors('*')}">List of Errors</div> 
-		<div th:each="err : ${#fields.errors('*')}">
-			<span style="color: red;" th:text="${err}" class="fieldErrors"></span>
 		</div>
+	
+	
+		<form  th:action="@{/doLogin}" method="POST">
+			<table>
+				<tr>
+				 	<div class="m-3">
+						<!--<td>Email:</td><td><input type="text" th:field="*{username}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name error</p></td>-->
+						<td style="padding:5px">User Name:</td><td style="padding:5px"><input type="text" name="username" id="username" placeholder="UserName" required/></td>
+					</div>	
+				</tr>
+				
+				<tr>
+					<!--<td>Password:</td><td><input type="password" th:field="*{password}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error</p></td>-->
+					<td style="padding:5px">Password:</td><td style="padding:5px"><input type="password" name="password" id="password" placeholder="Password" required/></td>
+				</tr>
+				<br>
+				<tr>
+					<td colspan="2"><input type="submit" value="Submit" class="btn btn-primary"/></td>
+				</tr>
+			</table>
 			
+				
 			
-		
-	</form>
+		</form>
 	</div>
 </body>
 
