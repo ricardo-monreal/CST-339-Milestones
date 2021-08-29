@@ -34,7 +34,7 @@ public class HomeController {
 	
 	@Autowired
 	private ProductRepository productRepo;
-	
+		
 	
 	// handle requests from the service class
 	@Autowired ProductService service;
@@ -101,6 +101,16 @@ public class HomeController {
 		
 		return "products";
 	}
+	
+	//Milestone 7
+	// products handler // displays a desired product
+		@GetMapping("/products/{id}")
+		public String listProduct(Model model) {
+			List<ProductModel> listProduct = productRepo.findAll();
+			model.addAttribute("listProduct", listProduct);
+			
+			return "products";
+		}
 	
 	// product create product handler
 	@PostMapping("/process_create_product")

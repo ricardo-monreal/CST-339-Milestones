@@ -43,11 +43,13 @@ public class ProductService {
 	}
 	
 	
-	// get prodcuts for REST API
+	// get products for REST API
 	public List<ProductModel> getProducts() {
 		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
+	
+
 
 	
 	

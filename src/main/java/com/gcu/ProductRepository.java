@@ -6,5 +6,8 @@ import com.gcu.model.ProductModel;
 
 public interface ProductRepository extends JpaRepository<ProductModel, Long>
 {
+	//milestone 7
+	
+	
 
 }
