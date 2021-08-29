@@ -42,5 +42,14 @@ public class ProductService {
 		repo.deleteById(id);
 	}
 	
+	
+	// get prodcuts for REST API
+	public List<ProductModel> getProducts() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+
+	
+	
 
 }
