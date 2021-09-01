@@ -1,9 +1,11 @@
 package com.gcu.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -104,13 +106,15 @@ public class HomeController {
 	
 	//Milestone 7
 	// products handler // displays a desired product
-		@GetMapping("/products/{id}")
-		public String listProduct(Model model) {
-			List<ProductModel> listProduct = productRepo.findAll();
-			model.addAttribute("listProduct", listProduct);
-			
-			return "products";
-		}
+	@GetMapping("/products/{id}")
+
+	public ResponseEntity<ProductModel> findById(@PathVariable Long id)
+	{
+	
+		Optional<ProductModel> product = productRepo.findById(id);
+		//return ResponseEntity.ok(product.get());
+		return (ResponseEntity.ok(product.get()));
+	}
 	
 	// product create product handler
 	@PostMapping("/process_create_product")
