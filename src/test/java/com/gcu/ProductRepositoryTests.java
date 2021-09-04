@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
 import com.gcu.model.ProductModel;
-import com.gcu.model.User;
+
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
