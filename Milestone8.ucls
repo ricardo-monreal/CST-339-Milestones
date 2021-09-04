@@ -168,12 +168,12 @@
   </class>  
   <package id="21" language="java" name="com.gcu.service" project="Milestone2" 
     file="/Milestone2/src/main/java/com/gcu/service" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="50" width="118" x="159" y="879"/>    
+    <position height="-1" width="-1" x="228" y="550"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <class id="22" language="java" name="com.gcu.service.ProductService" project="Milestone2" 
     file="/Milestone2/src/main/java/com/gcu/service/ProductService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="191" y="1040"/>    
+    <position height="-1" width="-1" x="233" y="699"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -182,7 +182,7 @@
   </class>  
   <class id="23" language="java" name="com.gcu.service.UserService" project="Milestone2" 
     file="/Milestone2/src/main/java/com/gcu/service/UserService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="191" y="1240"/>    
+    <position height="-1" width="-1" x="228" y="897"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
