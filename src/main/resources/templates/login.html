@@ -10,12 +10,12 @@
 		</div>
 	
 	
-		<form  th:action="@{/doLogin}" method="POST">
+		<form  name="f" th:action="@{/doLogin}" method="POST">
 			<table>
 				<tr>
 				 	<div class="m-3">
 						<!--<td>Email:</td><td><input type="text" th:field="*{username}" class="form-control"></td><td><p style="color: red;" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name error</p></td>-->
-						<td style="padding:5px">User Name:</td><td style="padding:5px"><input type="text" name="username" id="username" placeholder="UserName" required/></td>
+						<td style="padding:5px">User Name:</td><td style="padding:5px"><input type="text" name="username" id="username" placeholder="E-Mail" required/></td>
 					</div>	
 				</tr>
 				

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gcu.UserRepository;
 import com.gcu.model.LoginModel;
-import com.gcu.model.ProductModel;
+
 
 
 @Controller
@@ -29,7 +29,7 @@ public class LoginController {
 	@GetMapping("")
 	public String display(Model model) 
 	{
-		// Display login form view
+		// Display login form view 
 		model.addAttribute("title", "Login Form");
 		model.addAttribute("loginModel", new LoginModel());
 		

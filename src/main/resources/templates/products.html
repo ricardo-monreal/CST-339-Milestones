@@ -5,17 +5,18 @@
 </head>
 
 <body>
+	
 	<div layout:fragment="content">
 		<div class="container text-center">
 		    <div>
 		        <form th:action="@{/logout}" method="post">
-		                Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+		                Welcome <h2>[[${#request.userPrincipal.principal.fullName}]]</h2>
 		            </p>
 		            <input type="submit" value="Sign Out" />
 		        </form>
 		    </div>
 		    <div>
-		        <h1>List of Products</h1>
+		        <h3>List of Products</h3>
 		    </div>
 		     
 		    <div>

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gcu</groupId>
-	<artifactId>Milestone2</artifactId>
+	<artifactId>CST339_Milestones</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Milestone2</name>
-	<description>CST-339 Milestone 2</description>
+	<description>CST339_Milestones</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -84,6 +84,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>CST339_Milestone_Project</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
