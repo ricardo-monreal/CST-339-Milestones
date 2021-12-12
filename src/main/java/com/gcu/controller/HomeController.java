@@ -46,7 +46,7 @@ public class HomeController {
 	public String indexPage(Model model) 
 	{
 		// Display login form view
-		model.addAttribute("title", "CST-339 Milestone Store");
+		model.addAttribute("title", "CST-323 Milestone Store");
 		model.addAttribute("Milestone2", Milestone2);
 		
 		
